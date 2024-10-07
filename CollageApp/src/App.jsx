@@ -16,6 +16,7 @@ import Contacts from "./JsxFolders/Contacts";
 import Java from "./JsxFolders/Java";
 import Dev from "./JsxFolders/Dev";
 import Marn from "./JsxFolders/Marn";
+import Registration from "./JsxFolders/Registration";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -65,6 +66,10 @@ const App = () => {
            }
 
           ]
+        },
+        {
+          path: 'registration',
+          element: <Registration />
         }
       ]
     }
