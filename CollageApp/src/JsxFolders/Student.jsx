@@ -28,6 +28,8 @@ const Student = () => {
       console.error('Error deleting student:', error)
     }
   }
+ 
+
   return (
     <div className='table'>
       <table>
@@ -38,6 +40,8 @@ const Student = () => {
           <th>Phone</th>
           <th>Address</th>
           <th>Password</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
        </thead>
        <tbody>
@@ -49,10 +53,11 @@ const Student = () => {
               <td>{item.phone}</td>
               <td>{item.address}</td>
               <td>{item.password}</td>
-              <td><Link ><button className='edit'>Edit</button></Link></td>
+              <td><Link to={`/edit/${item.id}`}><button className='edit' >Edit</button></Link></td>
               <td><button onClick={()=>{
                 handleDelete(item.id)
               }} className='delete'>Delete</button></td>
+             
              
               
             </tr>

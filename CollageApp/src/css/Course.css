@@ -1,0 +1,23 @@
+.form{ 
+    
+    /* background-color: blue; */
+    width: auto;
+    height: auto;
+    display: flex;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    textarea{
+        /* resize: vertical; */
+        height: auto;
+        width: auto;
+        padding: 10px;
+        margin: 5px;
+    }
+   
+}
+.form input,select{
+   display: flex;
+   margin:5px;
+   gap:20px;
+   width: 300px;
+}

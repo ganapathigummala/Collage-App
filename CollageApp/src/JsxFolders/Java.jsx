@@ -1,4 +1,7 @@
 import React ,{useState}from 'react'
+import '../css/Course.css'
+    
+
 
 const Java = () => {
     const [formData, setFormData] = useState({
@@ -29,15 +32,15 @@ const Java = () => {
     };
   
     return (
-      <div style={{ maxWidth: '500px', margin: '0 auto', padding: '20px' }}>
-        <h2>Java Developer Application Form</h2>
+      <div >
+        <h2>Java Developer</h2>
         {submitted ? (
           <div>
             <h3>Thank you for submitting the form!</h3>
           </div>
         ) : (
-          <form onSubmit={handleSubmit}>
-            <div style={{ marginBottom: '10px' }}>
+          <form onSubmit={handleSubmit} className='form'>
+            <div>
               <label htmlFor="name">Full Name:</label>
               <input
                 type="text"
@@ -46,11 +49,11 @@ const Java = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+                
               />
             </div>
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
@@ -59,11 +62,11 @@ const Java = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+                
               />
             </div>
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="phone">Phone Number:</label>
               <input
                 type="tel"
@@ -72,11 +75,10 @@ const Java = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               />
             </div>
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="course">Select Course:</label>
               <select
                 id="course"
@@ -84,36 +86,27 @@ const Java = () => {
                 value={formData.course}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               >
-                <option value="Java Development">ava Developer</option>
+                <option value="Java Development">Java Developer</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Python Development">Python Development</option>
                 <option value="Software Testing">Software Testing</option>
               </select>
             </div>
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="comments">Additional Comments:</label>
               <textarea
                 id="comments"
                 name="comments"
                 value={formData.comments}
                 onChange={handleChange}
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               ></textarea>
             </div>
   
             <button
               type="submit"
-              style={{
-                backgroundColor: '#4CAF50',
-                color: 'white',
-                padding: '10px 20px',
-                border: 'none',
-                cursor: 'pointer',
-                width: '100%',
-              }}
+             
             >
               Submit
             </button>

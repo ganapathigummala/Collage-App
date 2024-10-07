@@ -14,8 +14,8 @@ const Body = () => {
               <Link to='registration' className='link'>REGISTRATION</Link>
               <Link to='student' className='link'>STUDENT CORNER</Link>
               <Link to='administration' className='link'>ADMINISTRATION</Link>
-              <Link to='facilities' className='link'>FACILITIES</Link>
-              <Link to='certification' className='link'>CERTIFICARTIFICATIONS</Link>
+              {/* <Link to='facilities' className='link'>FACILITIES</Link> */}
+              <Link to='certification' className='link'>ACHIEVEMENT</Link>
               <Link to='about' className='link'>ABOUT US</Link>
               <Link to='contacts' className='link'>CONTACTS</Link>
             </nav>

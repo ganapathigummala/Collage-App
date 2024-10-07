@@ -17,6 +17,7 @@ import Java from "./JsxFolders/Java";
 import Dev from "./JsxFolders/Dev";
 import Marn from "./JsxFolders/Marn";
 import Registration from "./JsxFolders/Registration";
+import EditEmployee from "./JsxFolders/EditEmployee";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -37,12 +38,16 @@ const App = () => {
           element: <Administration />
         },
         {
-          path: 'facilities',
+          path: '/facilities',
           element: <Facilities />
         },
         {
-          path: 'student',
+          path: '/student',
           element: <Student />
+        },
+        {
+          path: '/edit/:id',
+          element: <EditEmployee />
         },
         {
           path: 'certification', // Fixed typo from 'certificartification' to 'certification'

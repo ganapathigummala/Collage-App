@@ -1,59 +1,46 @@
 import React from 'react';
 import '../css/Administration.css'; // Importing the CSS from the css folder
 
+const teamMembers = [
+  {
+      name: 'Mr. XYZ',
+      role: 'Director',
+      bio: 'Mr. XYZ has over 20 years of experience in the IT industry and has been instrumental in building JSPiders into a leading training institute.'
+  },
+  {
+      name: 'Ms. ABC',
+      role: 'Head Trainer - Java',
+      bio: 'Ms. ABC is an expert in Java development with over 10 years of experience in both corporate training and software development.'
+  },
+  {
+      name: 'Mr. DEF',
+      role: 'Training Coordinator',
+      bio: 'Mr. DEF manages the training schedules and coordinates with both students and trainers to ensure smooth operations at the Rajajinagar center.'
+  },
+  {
+      name: 'Ms. GHI',
+      role: 'Placement Officer',
+      bio: 'Ms. GHI works closely with companies to provide 100% placement assistance to students, ensuring their successful transition to the IT industry.'
+  },
+];
+
 const Administration = () => {
   return (
-    <div className="administration-section">
-      <h1>Administration Team</h1>
-      <p>
-        The administration team at JSPiders Rajajinagar ensures smooth and effective functioning of all operations. Our team is dedicated to providing the best resources, infrastructure, and support to both students and staff, ensuring an optimal learning environment.
-      </p>
+      <div className="admin-container">
+          <h1>Meet the Administration</h1>
+          <p>At JSPiders Rajajinagar, we are backed by a team of experienced professionals dedicated to delivering the best training and career opportunities for our students.</p>
 
-      <section className="admin-roles">
-        <h2>Meet Our Administration Team</h2>
-        <div className="admin-grid">
-          <div className="admin-card">
-            <h3>Chief Administrative Officer</h3>
-            <p>
-              Our Chief Administrative Officer oversees all operations and ensures that all aspects of our training programs are functioning effectively. With years of experience in managing educational institutions, the officer ensures a seamless learning journey for every student.
-            </p>
+          <div className="team-members">
+              {teamMembers.map((member, index) => (
+                  <div className="team-member" key={index}>
+                      <h2>{member.name}</h2>
+                      <h3>{member.role}</h3>
+                      <p>{member.bio}</p>
+                  </div>
+              ))}
           </div>
-          <div className="admin-card">
-            <h3>Operations Manager</h3>
-            <p>
-              The Operations Manager is responsible for managing day-to-day tasks, coordinating between various departments, and ensuring that the institute's infrastructure meets the needs of our students and staff.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="admin-support">
-        <h2>Administrative Support</h2>
-        <div className="admin-grid">
-          <div className="admin-card">
-            <h3>Student Support Services</h3>
-            <p>
-              Our student support team is available to assist students with enrollment, certification, and any queries related to their courses. We ensure that our students have the best experience during their time at JSPiders Rajajinagar.
-            </p>
-          </div>
-          <div className="admin-card">
-            <h3>Facilities & IT Support</h3>
-            <p>
-              The Facilities & IT Support team ensures that the institute’s technological infrastructure is always up-to-date and functional. They help maintain the classroom environment and provide technical assistance whenever needed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact-administration">
-        <h2>Contact Our Administration Team</h2>
-        <p>
-          If you have any queries or need assistance, feel free to reach out to our administration team. We're here to support you throughout your learning journey!
-        </p>
-        <button className="contact-btn">Contact Us</button>
-      </section>
-    </div>
+      </div>
   );
-};
+}
 
 export default Administration;

@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
     <header>
-        <h1>Jspider's</h1>
+        <h1 className='.h1'>Jspider's</h1>
     </header>
     <div  className='jimg'>
     </div>
@@ -22,7 +22,7 @@ const Home = () => {
            
         </div>
     </div>
-   <p className='para'>Mr. [Name], the esteemed Head of JSPiders Rajajinagar, has been at the helm of the institution for over a decade. With a clear vision of fostering the next generation of IT professionals, he brings a blend of academic excellence and practical industry experience to the institute.
+   <p className='para'>Mr.Shankar Narayan, the esteemed Head of JSPiders Rajajinagar, has been at the helm of the institution for over a decade. With a clear vision of fostering the next generation of IT professionals, he brings a blend of academic excellence and practical industry experience to the institute.
 
 His leadership has driven JSPiders Rajajinagar to become one of the most sought-after training centers in the region. Under his guidance, the institute has consistently delivered top-quality training programs that align with the dynamic demands of the IT industry. His focus on innovative teaching methods, up-to-date curriculum, and student-centric initiatives have empowered thousands of learners to achieve their professional goals.</p>
 <p className="para">

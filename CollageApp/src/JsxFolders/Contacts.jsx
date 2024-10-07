@@ -1,6 +1,8 @@
 import React ,{useState}from 'react'
 import { Link, Outlet} from 'react-router-dom'
 import '../css/Contact.css';
+import '../css/Course.css';
+
 
 const CONTACT = () => {
   const [formData, setFormData] = useState({
@@ -42,11 +44,11 @@ const CONTACT = () => {
         </div>
       </div>
       <div className='contactUs'>
-      <div style={{ maxWidth: '500px', margin: '0 auto', padding: '20px' }}>
+      <div >
         <h1>Contact Us</h1>
         
-          <form onSubmit={handleSubmit}>
-            <div style={{ marginBottom: '10px' }}>
+          <form onSubmit={handleSubmit} className='form1 form'>
+            <div>
               <label htmlFor="name">Full Name:</label>
               <input
                 type="text"
@@ -55,11 +57,10 @@ const CONTACT = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               />
             </div>
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
@@ -68,11 +69,10 @@ const CONTACT = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               />
             </div>
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="phone">Phone Number:</label>
               <input
                 type="tel"
@@ -81,33 +81,24 @@ const CONTACT = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               />
             </div>
   
             
   
-            <div style={{ marginBottom: '10px' }}>
+            <div>
               <label htmlFor="comments">Additional Comments:</label>
               <textarea
                 id="comments"
                 name="comments"
                 value={formData.comments}
                 onChange={handleChange}
-                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
               ></textarea>
             </div>
   
             <button
               type="submit"
-              style={{
-                backgroundColor: '#4CAF50',
-                color: 'white',
-                padding: '10px 20px',
-                border: 'none',
-                cursor: 'pointer',
-                width: '100%',
-              }}
+              
             >
               Submit
             </button>

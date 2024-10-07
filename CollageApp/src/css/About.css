@@ -63,4 +63,29 @@
   .enroll-btn:hover {
     background-color: #0056b3;
   }
-  
+  .about-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.about-container h1, .about-container h2 {
+    color: #333;
+}
+
+.about-container p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.vision-mission, .training-highlights, .contact-details {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
