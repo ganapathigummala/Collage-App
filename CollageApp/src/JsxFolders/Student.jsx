@@ -54,6 +54,7 @@ const Student = () => {
                 handleDelete(item.id)
               }} className='delete'>Delete</button></td>
              
+             
               
             </tr>
           ))
