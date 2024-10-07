@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   
 }
 .app{
   display: flex;
-  height: 100vh;
+  height: auto;
   width: 100vw;
 }
 nav{
-  background-color: #000;
+  background-color: #012f38;
     color: #fff;
     display: flex;
     justify-content: space-evenly;
@@ -19,12 +20,126 @@ nav{
     height: 100vh;
     width: 20vw;
     padding: 10px 30px;
+    position: fixed;
+}
+.link{
+  text-decoration: none;
+  color:whitesmoke;
 }
 .outlet{
-  background-color: pink;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 80vw;
+  background-color: rgb(229, 227, 227);
+    /* min-height: 100vh; */
+    height: auto;
+    max-width: 80vw;
+  
+    margin-left: 20vw;
+    
+    
+      header{
+        background-color: #585757;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        /* padding-top:15px ; */
+       
+        width: 78vw;
+        /* height: 10vh; */
+      
+        margin: 10px;
+      }
+      h1{
+        color: whitesmoke;
+        font-size: 50px;
+      }
+      h1::first-letter {
+        font-size: 70px;
+        color: #c98900;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    
 }
+.jimg{
+  height: 700px;
+  width: 70vw;
+background-image: url('imgs/images.jpeg.jpg'); 
+ height: 300px; /* Set height for the div */
+  background-size:100% 300px ; 
+  background-position: auto auto; /* Center the image */
+  background-repeat: no-repeat;
+  margin: 30px auto;
+  background-color: #7b1919;
+  border: 2px solid #cc8903;
+  
+}
+.para {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin: auto;
+  text-align: justify;
+  padding: 30px 15px;
+  position: relative;
+  white-space: pre-wrap;
+  width: 70vw;
+  text-decoration: none;
+  text-indent: 5em;
+  letter-spacing: 0.5px;
+
+}
+
+
+
+.para::first-letter {
+  font-size: 30px;
+  color: #ffae00;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.paraimg{
+display: flex;
+justify-content:flex-start;
+height: auto;
+width: 70vw;
+margin: auto;
+div{
+  height: 350px;
+  width: 30vw;
+  background-color: whitesmoke;
+  white-space: pre-wrap;
+  align-content: center;
+  border: 2px solid #cc8903;
+
+}
+
+
+}
+ .img{
+  height: 350px;
+  width: 30vw;
+  background-image: url('imgs/IMG_20241006_182025.jpg'); 
+  background-size:100% 350px ; 
+  background-position: auto auto; /* Center the image */
+  background-repeat: no-repeat;
+  background-color: whitesmoke;
+  border: 2px solid #cc8903;
+
+}
+.logo{
+  height: 100px;
+  width: 200px;
+  background-image: url('imgs/logo.jpg'); 
+  background-size:100% 100px ; 
+  background-position: auto auto; /* Center the image */
+  background-repeat: no-repeat;
+  background-color: rgb(151, 38, 38);
+  border: 2px solid #cc8903;
+  border-radius: 50%;
+
+}
+

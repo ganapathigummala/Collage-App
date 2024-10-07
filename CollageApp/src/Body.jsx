@@ -7,18 +7,18 @@ import { Outlet, Link } from 'react-router-dom'
 const Body = () => {
   return (
     <div className='app'>
-        <header>
+        
             <nav>
-              
-              <Link to='home'>HOME</Link>
-              <Link to='about'>ABOUT US</Link>
-              <Link to='administration'>ADMINISTRATION</Link>
-              <Link to='facilities'>FACILITIES</Link>
-              <Link to='student'>STUDENT CORNER</Link>
-              <Link to='certification'>CERTIFICARTIFICATIONS</Link>
-              <Link to='contacts'>CONTACTS</Link>
+              <div className='logo'></div>
+              <Link to='home' className='link'>HOME</Link>
+              <Link to='about' className='link'>ABOUT US</Link>
+              <Link to='administration' className='link'>ADMINISTRATION</Link>
+              <Link to='facilities' className='link'>FACILITIES</Link>
+              <Link to='student' className='link'>STUDENT CORNER</Link>
+              <Link to='certification' className='link'>CERTIFICARTIFICATIONS</Link>
+              <Link to='contacts' className='link'>CONTACTS</Link>
             </nav>
-        </header>
+        
         <div className='outlet'>
        <Outlet></Outlet>
         </div>

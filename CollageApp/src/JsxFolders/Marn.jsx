@@ -1,50 +1,41 @@
-import React ,{useState}from 'react'
-import { Link, Outlet} from 'react-router-dom'
-import '../css/Contact.css';
+import React,{useState} from 'react'
 
-const CONTACT = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-   
-    comments: ''
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
+const Marn = () => {
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      phone: '',
+      course: '',
+      comments: ''
     });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can add form validation here if needed
-
-    // Handle form submission, e.g., send data to an API
-    console.log('Form data submitted:', formData);
-    setSubmitted(true);
-  };
-  return (
-    <div className='contact'>
-      <div>
-        <div className='courseOffered'>
-          <div><Link to="java" className='linkContact'>Java Developer</Link></div>
-          <div><Link to="marn" className='linkContact'>MERN Stack Develope</Link></div>
-          <div><Link to="dev" className='linkContact'>DevOps Developerv</Link></div>
-        </div>
-        <div className='output'>
-          <Outlet></Outlet>
-        </div>
-      </div>
-      <div className='contactUs'>
+  
+    const [submitted, setSubmitted] = useState(false);
+  
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      // You can add form validation here if needed
+  
+      // Handle form submission, e.g., send data to an API
+      console.log('Form data submitted:', formData);
+      setSubmitted(true);
+    };
+  
+    return (
       <div style={{ maxWidth: '500px', margin: '0 auto', padding: '20px' }}>
-        <h1>Contact Us</h1>
-        
+        <h2>MERN Stack Develope Application Form</h2>
+        {submitted ? (
+          <div>
+            <h3>Thank you for submitting the form!</h3>
+          </div>
+        ) : (
           <form onSubmit={handleSubmit}>
             <div style={{ marginBottom: '10px' }}>
               <label htmlFor="name">Full Name:</label>
@@ -85,7 +76,23 @@ const CONTACT = () => {
               />
             </div>
   
-            
+            <div style={{ marginBottom: '10px' }}>
+              <label htmlFor="course">Select Course:</label>
+              <select
+                id="course"
+                name="course"
+                value={formData.course}
+                onChange={handleChange}
+                required
+                style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+              >
+                <option value="">Marn Stack</option>
+                <option value="Java Development">Java Development</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Python Development">Python Development</option>
+                <option value="Software Testing">Software Testing</option>
+              </select>
+            </div>
   
             <div style={{ marginBottom: '10px' }}>
               <label htmlFor="comments">Additional Comments:</label>
@@ -112,11 +119,9 @@ const CONTACT = () => {
               Submit
             </button>
           </form>
-       
+        )}
       </div>
-      </div>
-    </div>
-  )
-}
+    );
+  };
 
-export default CONTACT
+export default Marn

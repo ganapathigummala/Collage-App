@@ -6,7 +6,6 @@ import About from "./JsxFolders/About";
 
 import Administration from "./JsxFolders/Administration";
 
-
 import Facilities from "./JsxFolders/Facilities";
 
 
@@ -14,6 +13,9 @@ import Student from "./JsxFolders/Student";
 
 import Certification from "./JsxFolders/Certification";
 import Contacts from "./JsxFolders/Contacts";
+import Java from "./JsxFolders/Java";
+import Dev from "./JsxFolders/Dev";
+import Marn from "./JsxFolders/Marn";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -47,7 +49,22 @@ const App = () => {
         },
         {
           path: 'contacts',
-          element: <Contacts />
+          element: <Contacts />,
+          children: [ 
+           {
+            path:'java',
+            element:<Java></Java>
+           },
+           {
+            path:'dev',
+            element: <Dev></Dev>
+           },
+           {
+            path:'marn',
+            element:<Marn></Marn>
+           }
+
+          ]
         }
       ]
     }
