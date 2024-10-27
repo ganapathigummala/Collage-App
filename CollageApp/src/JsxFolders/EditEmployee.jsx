@@ -47,6 +47,7 @@ const EditEmployee = () => {
 
      
   return (
+    
     <div className='reg'>
        
     <form onSubmit={handleSubmit}> <h1>Updation </h1>
